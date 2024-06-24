@@ -1,0 +1,158 @@
+/* Paleta de colores */
+:root {
+    --color-primario: #cedcdf; /* Gris oscuro */
+    --color-secundario: #666; /* Gris medio */
+    --color-fondo: #f5f5f5; /* Gris claro */
+    --color-texto: #d8cfcf; /* Texto oscuro */
+}
+
+/* General */
+html, body {
+    height: 100%;
+    overflow-x: auto;
+    font-family: Arial, sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.block-logo img {
+    height: 50px;
+}
+
+.greeting {
+    font-size: 20px;
+}
+
+/* Estructura */
+#header, #footer {
+    background: var(--color-primario);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+#header {
+    top: 0;
+}
+
+#footer {
+    bottom: 0;
+}
+
+#content div.content-start, #footer .footer-start {
+    padding: 8px 16px;
+}
+
+#header .btn-icon i {
+    margin-right: 5px;
+}
+
+@media (min-width: 992px) {
+    #header, #footer {
+        height: 80px;
+    }
+    #content {
+        margin-top: 110px;
+        margin-bottom: 110px;
+    }
+    .block-logo {
+        text-align: left;
+    }
+    .block-buttons {
+        text-align: right;
+    }
+}
+
+@media (max-width: 992px) {
+    #header, #footer {
+        height: 120px;
+    }
+    #content {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    .block-logo, .block-buttons {
+        text-align: center;
+    }
+}
+
+/* Messages */
+#content div.card.card-message .user-data-message {
+    background: var(--color-fondo);
+}
+
+#content img.user-avatar {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#content div.card.card-message .registry-user, 
+#content div.card.card-message .last-connection-user {
+    font-size: 11px;
+}
+
+#content div.card.card-message .username {
+    font-size: 20px;
+}
+
+/* Ckeditor */
+.ck.ck-content {
+    height: 500px;
+}
+
+.reply-fast.ck.ck-content {
+    height: 200px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1050px) {
+    .contenedor {
+        grid-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    form {
+        width: 290px;
+    }
+    .contenido-login h2 {
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+    .img img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+    .img, .wave {
+        display: none;
+    }
+    .contenido-login {
+        justify-content: center;
+    }
+}
+
+/* Animaciones */
+.btn,
+.navbar-nav li a {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(247, 235, 235, 0.1);
+}
+
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: #666; /* Gris medio cuando se pasa el mouse */
+}
